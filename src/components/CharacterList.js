@@ -1,6 +1,14 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import CharacterCard from "./CharacterCard";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+
+const Container = styled.section`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+`;
 
 const CharacterList = () => {
   // TODO: Add useState to track data from useEffect
@@ -18,7 +26,8 @@ const CharacterList = () => {
   }, []);
 
   return (
-    <section className="character-list">
+    <Container className="character-list">
+      <Link to="/">Home</Link>
       {characterState.map((item, key) => (
         <div>
           <CharacterCard 
@@ -30,7 +39,7 @@ const CharacterList = () => {
           />
         </div>
       ))}
-    </section>
+    </Container>
   );
 }
 
