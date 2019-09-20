@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import CharacterCard from "./CharacterCard";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Container = styled.section`
@@ -23,11 +22,11 @@ const CharacterList = () => {
       const CharArray = res.data.results;
       setCharacterState(CharArray)
     })
+    .catch(error => {console.log("This is an error", error)})
   }, []);
 
   return (
     <Container className="character-list">
-      <Link to="/">Home</Link>
       {characterState.map((item, key) => (
         <div>
           <CharacterCard 
