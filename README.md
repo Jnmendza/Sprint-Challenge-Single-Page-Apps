@@ -1,3 +1,4 @@
+Initial Commit
 # Sprint Challenge: Single Page Applications
 
 ## Rick & Morty Edition
@@ -27,7 +28,7 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ]  Explain benefit(s) using `client-side routing`?
 
-> Answer:
+> Answer: When a user clicks on a link on the client-side, the URL changes but there is no request to the server. The whole page wont refresh when using client side. Only the elements inside the app will change.
 
 ## Project Set Up
 
